@@ -19,6 +19,7 @@ const LoginSignup = () => {
     let responseData;
     await fetch('https://manipurmart-backend.onrender.com/login', {
       method: 'POST',
+      credentials: "same-origin",
       headers: {
         Accept: 'application/form-data',
         'Content-Type': 'application/json',
@@ -39,6 +40,7 @@ const LoginSignup = () => {
     let responseData;
     await fetch('https://manipurmart-backend.onrender.com/signup', {
       method: 'POST',
+      credentials: "same-origin",
       headers: {
         Accept: 'application/form-data',
         'Content-Type': 'application/json',

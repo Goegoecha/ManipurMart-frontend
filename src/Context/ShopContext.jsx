@@ -24,6 +24,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem('auth-token'))
       fetch('https://manipurmart-backend.onrender.com/getcart', {
         method: 'POST',
+        credentials: "same-origin",
         headers: {
           Accept: 'application/form-data',
           'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -39,6 +40,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem('auth-token')) {
       fetch('https://manipurmart-backend.onrender.com/addtocart', {
         method: 'POST',
+        credentials: "same-origin",
         headers: {
           Accept: 'application/form-data',
           'auth-token': `${localStorage.getItem('auth-token')}`,
@@ -53,6 +55,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem('auth-token')) {
       fetch('https://manipurmart-backend.onrender.com/removefromcart', {
         method: 'POST',
+        credentials: "same-origin",
         headers: {
           Accept: 'application/form-data',
           'auth-token': `${localStorage.getItem('auth-token')}`,
